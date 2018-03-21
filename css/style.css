@@ -1,0 +1,31 @@
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+.search > input {
+  outline: none;
+  font-size: 16pt;
+  width: 40%;
+  padding: 50%;
+}
+
+.gallery {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.lightbox-image {
+  margin: 3%;
+}
+
+.lb-caption2 {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1em;
+}
