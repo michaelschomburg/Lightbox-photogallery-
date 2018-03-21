@@ -1,3 +1,7 @@
+html {
+  box-sizing: border-box;
+}
+
 .search {
   display: flex;
   justify-content: center;
@@ -6,10 +10,17 @@
 }
 
 .search > input {
+  box-sizing: inherit;
+  margin-top: 2%;
   outline: none;
-  font-size: 16pt;
-  width: 40%;
-  padding: 50%;
+  font-size: 12pt;
+  padding: 14px;
+  width: 35%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+
+
+
 }
 
 .gallery {
@@ -21,11 +32,25 @@
 }
 
 .lightbox-image {
+  transition: opacity 0.5s ease;
+  transition: all .3s ease-in-out;
   margin: 3%;
+  opacity: 1;
 }
+
+.lightbox-image:hover {
+  transform: scale(1.1);
+  opacity: 0.5;
+
+}
+
 
 .lb-caption2 {
   font-size: 13px;
   font-weight: bold;
   line-height: 1em;
 }
+
+/* .lb-dataContainer {
+  padding-top: 10px;
+} */

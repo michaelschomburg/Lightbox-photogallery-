@@ -25,9 +25,7 @@ function search() {
 
 // looping through every element and compare the attribute with the input
   for (i = 0; i < a.length; i++) {
-    a = document.getElementsByClassName('lightbox-image');
-
-    if (a[i].getAttribute('data-title').indexOf(filter) > -1) {
+    if (a[i].getAttribute('data-title').toUpperCase().indexOf(filter) > -1) {
       a[i].style.display = "";
     } else {
       a[i].style.display = "none";
