@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto Mono', sans-serif;
   line-height: 1.6;
 }
 
@@ -67,7 +67,29 @@ p {
 
 /*Lightbox*/
 
+.lightboxOverlay {
+  width: 100vw;
+  height: 100vh;
+}
 
+.lb-outerContainer,
+.lb-container,
+.lb-image,
+.lb-nav,
+.lb-data,
+.lightbox,
+.lb-dataContainer {
+  display: inline;
+  width: 80%;
+  margin: auto;
+}
+
+
+
+
+/* .lightbox .lb-image {
+  max-width: 80%;
+} */
 /* =================================
   Media queries
 ==================================== */
@@ -127,6 +149,13 @@ p {
       transform: scale(1.1);
       opacity: 0.5;
     }
+
+    .lb-caption2 {
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 1em;
+    }
+
 
 
   }
