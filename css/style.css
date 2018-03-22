@@ -1,7 +1,29 @@
-html {
+/* =================================
+  Base Element Styles
+==================================== */
+* {
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Roboto Mono', monospace;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0 0;
+}
+
+/* =================================
+  Base Layout Styles mobile first
+==================================== */
+
+/*General*/
+
+/*Search*/
 .search {
   display: flex;
   justify-content: center;
@@ -11,46 +33,100 @@ html {
 
 .search > input {
   box-sizing: inherit;
-  margin-top: 2%;
+  margin: 2%;
   outline: none;
-  font-size: 12pt;
-  padding: 14px;
+  font-size: 8pt;
+  padding: 10px;
   width: 35%;
   border: 1px solid lightgrey;
   border-radius: 5px;
-
-
-
 }
+
+/*Gallery*/
 
 .gallery {
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
   justify-content: center;
-
 }
 
 .lightbox-image {
-  transition: opacity 0.5s ease;
-  transition: all .3s ease-in-out;
-  margin: 3%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3%;
   opacity: 1;
+  width: 45%;
+  height: auto;
 }
 
-.lightbox-image:hover {
-  transform: scale(1.1);
-  opacity: 0.5;
-
+.thumbnails-image {
+  width: 80%;
+  height: 80%;
 }
 
+/*Lightbox*/
 
-.lb-caption2 {
-  font-size: 13px;
-  font-weight: bold;
-  line-height: 1em;
-}
 
-/* .lb-dataContainer {
-  padding-top: 10px;
+/* =================================
+  Media queries
+==================================== */
+
+/*General Tablets and landscape phones adjustments possible*/
+
+/* Portrait and Landscape referenced from css-tricks.com */
+/* @media only screen
+  and (min-device-width: 420px)
+  and (max-device-width: 767px) {
+
+
 } */
+
+/*General Tablets adjustments possible*/
+/* Portrait and Landscape referenced from css-tricks.com */
+/* @media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px) {
+
+
+} */
+
+/*General Tablets adjustments possible*/
+/* Portrait and Landscape referenced from css-tricks.com */
+@media screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1900px) {
+
+    .search > input {
+      box-sizing: inherit;
+      margin: 2%;
+      outline: none;
+      font-size: 12pt;
+      padding: 10px;
+      width: 35%;
+      border: 1px solid lightgrey;
+      border-radius: 5px;
+    }
+
+
+    .gallery {
+      margin-left: 2%;
+      margin-right: 2%;
+
+    }
+
+    .lightbox-image {
+      transition: opacity 0.5s ease;
+      transition: all .3s ease-in-out;
+      opacity: 1;
+      width: 25%;
+      margin-bottom: 0;
+    }
+
+    .lightbox-image:hover {
+      transform: scale(1.1);
+      opacity: 0.5;
+    }
+
+
+  }
